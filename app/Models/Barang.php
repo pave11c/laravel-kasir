@@ -38,10 +38,10 @@ class Barang extends Model
         return $this->belongsTo(Satuan::class);
     }
 
-    public function supplier()
-    {
-        return $this->belongsTo(Supplier::class);
-    }
+    // public function supplier()
+    // {
+    //     return $this->belongsTo(Supplier::class);
+    // }
 
     public function TransaksiSementara()
     {
