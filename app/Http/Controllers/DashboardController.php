@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         $user = User::all();
-        #$barang = Barang::all();
+        $barang = Barang::all();
         $transaksi = Transaksi::all();
         $detail = TransaksiDetail::orderBy('created_at', 'desc')->get();
 
