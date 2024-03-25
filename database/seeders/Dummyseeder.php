@@ -12,6 +12,16 @@ class Dummyseeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $Userdata=[
+            [
+            'name'=>'agus',
+            'email'=>'admin@gmail.com',
+            'role'=>'admin',
+            'password'=>bcrypt('admin1234')
+
+            ],
+            
+
+        ];
     }
 }
