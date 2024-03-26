@@ -121,36 +121,5 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function(){
     Route::get('/admin/barang/{id}/show', [BarangController::class, 'show']);
     Route::put('/admin/barang/{id}', [BarangController::class, 'update']);
     Route::get('/admin/barang/{id}', [BarangController::class, 'destroy']);
-
-    Route::get('/admin/laporan', [TransaksiController::class, 'index']);
-    Route::get('/admin/laporan/cari', [TransaksiController::class, 'cari']);
-
-
-    Route::get('/admin/laporan/{dari}/{sampai}/print', [TransaksiController::class, 'printTanggal']);
-    Route::get('/admin/laporan/{kodeTransaksi}/print', [TransaksiController::class, 'print']);
-    Route::get('/admin/laporan/{kodeTransaksi}', [TransaksiController::class, 'show']);
-
-    Route::get('/admin/user', [UserController::class, 'index']);
-    Route::post('/admin/user/store', [UserController::class, 'store']);
-    Route::get('/admin/user/{id}/edit', [UserController::class, 'edit']);
-    Route::put('/admin/user/{id}', [UserController::class, 'update']);
-    Route::get('/admin/user/{id}', [UserController::class, 'destroy']);
-    Route::get('/admin/profile/{id}', [ProfileController::class, 'edit']);
-    Route::put('/admin/profile/{id}', [ProfileController::class, 'update']);
 });
 
-Route::group(['middleware' => ['auth', 'ceklevel:admin,kasir']], function(){
-    Route::get('/kasir/dashboard', [DashboardController::class, 'index']);
-
-    Route::get('/kasir/penjualan', [TransaksiSementaraController::class, 'index']);
-    Route::post('/kasir/penjualan/store', [TransaksiSementaraController::class, 'store']);
-    Route::post('/kasir/penjualan/bayar/{kodeTransaksi}', [TransaksiSementaraController::class, 'bayar']);
-    Route::get('/kasir/penjualan/{id}', [TransaksiSementaraController::class, 'destroy']);
-    Route::get('/kasir/penjualan/hapus/semua', [TransaksiSementaraController::class, 'hapusSemua']);
-    Route::get('/kasir/laporan/{kodeTransaksi}/print', [TransaksiController::class, 'print']);
-
-    Route::put('/kasir/transaksi-sementara/{id}/{barang_id}/edit', [TransaksiSementaraController::class, 'update']);
-    Route::get('/kasir/profile/{id}', [ProfileController::class, 'edit']);
-    Route::put('/kasir/profile/{id}', [ProfileController::class, 'update']);
-
-});
