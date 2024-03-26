@@ -34,7 +34,7 @@
 
                         <div class="card card-info shadow">
                             <div class="card-header">
-                                <h4 class="text-info">Waroeng Jawa</h4>
+                                <h4 class="text-info">Waroeng Kampung</h4>
                             </div>
                             <div class="card-body">
                                 <form method="POST" action="/postlogin" class="needs-validation">
@@ -63,12 +63,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <span>Belum punya akun? </span>
                                         <a href="/daftar" class="text-info">
                                             Daftar
                                         </a>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-info btn-lg btn-block" tabindex="4">
